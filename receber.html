@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="receber.css">
+    <title>Contato</title>
+</head>
+<!-- Aluno: Moisés da Fonseca Prado
+ Professor: Rodrigo Vilela
+ Curso: T.I.
+ Turno: Noturno -->
+ <body>
+    <div class="container">
+        <header class="header">
+            <h1>Contato</h1>
+        </header>
+
+        <div class="meio">
+        <nav class="nav">
+            <ul>
+                <li><a href="atv1.html"> Início</a></li>
+                <li><a href="sobre.html"> Sobre</a></li>
+                <li><a href="contato.html"> Contato</a></li>
+                <li><a href="musica.html">Músicas</a></li>
+
+            </ul>
+        </nav>
+
+        <main class="principal">
+            <selection class="conteudo">
+
+                <h1>Dados Recebidos</h1>
+                <p>Obrigado por entrar em contato conosco, em breve sua quetão será avaliada. Aqui estão as informações que você forneceu:</p>
+                <ul>
+                    <li><b>Nome:</b> <span id="nome"></span></li>   
+                    <li><b>Email:</b> <span id="email"></span></li>   
+                    <li><b>Mensagem:</b> <span id="mensagem"></span></li>
+                </ul>
+             
+
+
+
+            </selection>
+        </main>
+    </div>
+    <script>
+        // Função para obter os parâmetros da URL e decodificar
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const regex = /([^&=]+)=([^&]*)/g;
+            let match;
+
+            while ((match = regex.exec(queryString))) {
+                params[decodeURIComponent(match[1])] = decodeURIComponent(match[2].replace(/\+/g, ' '));
+            }
+
+            return params;
+        }
+
+        // Preencher os dados na página
+        window.onload = function() {
+            const params = getQueryParams();
+            document.getElementById('nome').textContent = params['nome'] || '';
+            document.getElementById('email').textContent = params['email'] || '';
+            document.getElementById('mensagem').textContent = params['mensagem'] || '';
+        };
+    </script>
+        <footer class="footer">
+            <p>&copy; 2024 New site </p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>

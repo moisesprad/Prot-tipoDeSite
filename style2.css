@@ -1,0 +1,114 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header, .footer {
+    background-color:rgb(78, 5, 106);
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+}
+.nav ul {
+    list-style: none;
+    text-align: center;
+    background: #000000;
+    overflow: hidden;     
+}
+.nav ul li {
+    display: inline;
+    text-align: center;
+}
+
+.nav ul li a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.principal {
+
+    text-align: center;
+}
+
+
+.meio {
+    background-color: rgb(78, 5, 106);
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+
+
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* ////////////////////////////////////////////////// */
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(64, 0, 96);
+    /* Fundo branco para formulário */
+    border: 1px solid #ccc;
+    /* borda para o formulário */
+    padding: 20px;
+    /* Espaçamento interno do formulário */
+    border-radius: 10px;
+    /* bordas arredondadas */
+    box-shadow: 0 0 10px black;
+    /* Sombra de destaque */
+    width: 80%;
+    /* Ajuste para o tamanho do formulário */
+    max-width: 400px;
+    /* Limite máximo de largura */
+    margin: 20px auto;
+    /* centralza o formulário na página */
+}
+
+form label {
+    margin: 10px 0 5px;
+    width: 100%;
+    /* largura total do label */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    /* Largura total das barras de digitação */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: blueviolet;
+}
+
